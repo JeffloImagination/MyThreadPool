@@ -37,6 +37,7 @@ int main()
 {
     std::cout << "Hello World!\n";
     ThreadPool Pool;
+    Pool.setPoolMode(MODE_CACHED);
     Pool.start(4);
 
     Result res1 = Pool.submitTask(std::make_shared<MyTask>(1, 10000));
